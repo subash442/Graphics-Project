@@ -2,7 +2,7 @@
 1518097147 source:d:\college materials\projects\graphics project\main.cpp
 	"Line.h"
 
-1518075755 d:\college materials\projects\graphics project\colors.h
+1518131322 d:\college materials\projects\graphics project\colors.h
 
 1518075272 source:d:\college materials\projects\graphics project\src\line.cpp
 	"Line.h"
@@ -10,7 +10,7 @@
 1518076904 d:\college materials\projects\graphics project\include\line.h
 	"D:\College materials\Projects\Graphics Project\SDL_Graphics.h"
 
-1518093476 d:\college materials\projects\graphics project\sdl_graphics.h
+1518131048 d:\college materials\projects\graphics project\sdl_graphics.h
 	<iostream>
 	<SDL.h>
 	"Colors.h"
@@ -18,7 +18,9 @@
 1518096983 d:\college materials\projects\graphics project\line.h
 	"SDL_Graphics.h"
 
-1518097035 source:d:\college materials\projects\graphics project\line.cpp
+1518126206 source:d:\college materials\projects\graphics project\line.cpp
 	"Line.h"
+
+1518131322 source:d:\college materials\projects\graphics project\sdl_graphics.cpp
 	"SDL_Graphics.h"
 

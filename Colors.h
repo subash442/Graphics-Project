@@ -2,6 +2,7 @@
 #define COLORS_H_INCLUDED
 
 #define COLOR_POINT    int r, int g , int b ,int alpha
+#define COLOR_VALUE     r,g,b,alpha
 
 //rgb values of colours
 

@@ -9,7 +9,7 @@ int main( int argc, char* args[] )
         return 1;
     }
     Line L1;
-    L1.plot_line();
+    L1.plot_line(RED);
     Handle_event();
     Close_Graphics();
 	return 0;

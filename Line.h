@@ -14,7 +14,7 @@ class Line
         Line(int x11 ,int y11 , int x22,int y22):x1(x11),y1(y11),x2(x22),y2(y22){}
         Line();
 
-        void plot_line();
+        void plot_line(COLOR_POINT);
         virtual ~Line();
 
 };
