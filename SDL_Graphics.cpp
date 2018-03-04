@@ -16,6 +16,7 @@ bool Init_Graphics()
 	}
 
 	 SDL_CreateWindowAndRenderer(SCREEN_HEIGHT, SCREEN_WIDTH, 0, &window, &renderer);    //create window and default renderer
+	 SDL_SetWindowTitle(window,"Graphics project");
 
     if( window == NULL || renderer == NULL )
     {
@@ -37,7 +38,7 @@ void Set_PointColor(COLOR_POINT)
 
 void Put_Point(int x,int y)
 {
-    SDL_RenderDrawPoint(renderer,x,y);  //draw a point of renderer colour in given location
+    SDL_RenderDrawPoint(renderer,x,SCREEN_HEIGHT-y);  //draw a point of renderer colour in given location
 }
 
 void Update_Screen()

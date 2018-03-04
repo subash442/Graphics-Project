@@ -36,6 +36,7 @@
 		<Unit filename="Colors.h" />
 		<Unit filename="Line.cpp" />
 		<Unit filename="Line.h" />
+		<Unit filename="SDL_Graphics.cpp" />
 		<Unit filename="SDL_Graphics.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

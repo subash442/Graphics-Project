@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1518097147 source:d:\college materials\projects\graphics project\main.cpp
+1520163216 source:d:\college materials\projects\graphics project\main.cpp
 	"Line.h"
 
 1518131322 d:\college materials\projects\graphics project\colors.h
@@ -15,12 +15,12 @@
 	<SDL.h>
 	"Colors.h"
 
-1518096983 d:\college materials\projects\graphics project\line.h
+1520161147 d:\college materials\projects\graphics project\line.h
 	"SDL_Graphics.h"
 
-1518126206 source:d:\college materials\projects\graphics project\line.cpp
+1520163125 source:d:\college materials\projects\graphics project\line.cpp
 	"Line.h"
 
-1518131322 source:d:\college materials\projects\graphics project\sdl_graphics.cpp
+1520158811 source:d:\college materials\projects\graphics project\sdl_graphics.cpp
 	"SDL_Graphics.h"
 
