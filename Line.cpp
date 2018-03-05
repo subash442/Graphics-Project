@@ -49,6 +49,8 @@ void Line::bres_plot_line(COLOR_POINT)
 {
     int p,x,y,lastval;
     Set_PointColor(COLOR_VALUE);
+    if (dx == 0)
+        dda_plot_line(COLOR_VALUE);
      if (dx > 0)
      {
          x = x1;

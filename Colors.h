@@ -15,6 +15,8 @@
 #define YELLOW       255,255,0,255
 #define PURPLE       128,0,128,255
 #define LIGHT_CYAN   224,255,255,255
+#define CRIMSON      220,20,60,255
+#define DARK_BLUE    0,56,147,255
 
 
 #endif // COLORS_H_INCLUDED

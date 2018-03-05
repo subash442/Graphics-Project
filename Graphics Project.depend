@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1520263734 source:d:\college materials\projects\graphics project\main.cpp
+1520271921 source:d:\college materials\projects\graphics project\main.cpp
 	"Line.h"
 	"Circle.h"
 
-1518131322 d:\college materials\projects\graphics project\colors.h
+1520267300 d:\college materials\projects\graphics project\colors.h
 
 1518075272 source:d:\college materials\projects\graphics project\src\line.cpp
 	"Line.h"
@@ -11,7 +11,7 @@
 1518076904 d:\college materials\projects\graphics project\include\line.h
 	"D:\College materials\Projects\Graphics Project\SDL_Graphics.h"
 
-1520226650 d:\college materials\projects\graphics project\sdl_graphics.h
+1520265720 d:\college materials\projects\graphics project\sdl_graphics.h
 	<iostream>
 	<SDL.h>
 	"Colors.h"
@@ -19,10 +19,10 @@
 1520258790 d:\college materials\projects\graphics project\line.h
 	"SDL_Graphics.h"
 
-1520265098 source:d:\college materials\projects\graphics project\line.cpp
+1520267003 source:d:\college materials\projects\graphics project\line.cpp
 	"Line.h"
 
-1520265098 source:d:\college materials\projects\graphics project\sdl_graphics.cpp
+1520269443 source:d:\college materials\projects\graphics project\sdl_graphics.cpp
 	"SDL_Graphics.h"
 
 1520258790 source:d:\college materials\projects\graphics project\circle.cpp

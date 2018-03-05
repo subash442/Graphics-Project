@@ -15,17 +15,16 @@ bool Init_Graphics()
 	    return false;
 	}
 
-	 SDL_CreateWindowAndRenderer(SCREEN_HEIGHT, SCREEN_WIDTH, 0, &window, &renderer);    //create window and default renderer
+	 SDL_CreateWindowAndRenderer(SCREEN_WIDTH, SCREEN_HEIGHT, 0, &window, &renderer);    //create window and default renderer
 	 SDL_SetWindowTitle(window,"Graphics project");
-
     if( window == NULL || renderer == NULL )
     {
        return false;
 	}
 
-    SDL_RenderSetLogicalSize( renderer, SCREEN_HEIGHT, SCREEN_WIDTH );  // Get device independent resolution for rendering
+    SDL_RenderSetLogicalSize( renderer, SCREEN_WIDTH, SCREEN_HEIGHT );  // Get device independent resolution for rendering
 
-    SDL_SetRenderDrawColor( renderer, LIGHT_CYAN ); //set the renderer colour
+    SDL_SetRenderDrawColor( renderer, WHITE ); //set the renderer colour
     SDL_RenderClear( renderer );    //clear the screen with given renderer colour
     quit = false;
     return true;

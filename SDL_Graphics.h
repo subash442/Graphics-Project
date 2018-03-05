@@ -4,8 +4,8 @@
 #include <iostream>
 #include <SDL.h>
 #include "Colors.h"
-#define SCREEN_WIDTH   500
-#define SCREEN_HEIGHT  500
+#define SCREEN_WIDTH   700
+#define SCREEN_HEIGHT  700
 
 using namespace std;
 
