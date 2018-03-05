@@ -33,6 +33,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Circle.cpp" />
+		<Unit filename="Circle.h" />
 		<Unit filename="Colors.h" />
 		<Unit filename="Line.cpp" />
 		<Unit filename="Line.h" />
