@@ -69,3 +69,10 @@ void Handle_event()
         }
     }
 }
+
+/*template <class T>
+T scale(T object,float Scale_factor)
+{
+    if (T.obj_prp == 'c')
+        return T;
+}*/

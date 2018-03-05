@@ -16,6 +16,7 @@ class Line
         void Set_Coordinate(int x11 ,int y11 , int x22,int y22);
         void dda_plot_line(COLOR_POINT);
         void bres_plot_line(COLOR_POINT);
+
         virtual ~Line();
 
 };

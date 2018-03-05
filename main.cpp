@@ -1,7 +1,11 @@
 #include "Line.h"
 #include "Circle.h"
 
-//don't use variable r,g,b because it is used in colors
+/********
+*****Caution::don't use variable r,g,b because it is used in colors
+********/
+
+void Draw_flag();
 
 int main( int argc, char* args[] )
 {
@@ -10,16 +14,15 @@ int main( int argc, char* args[] )
         cout<<"SDL initialization failed."<<SDL_GetError()<<endl;
         return 1;
     }
-    //Line L1(0,0,100,100);
-    //L1.dda_plot_line(RED);
-    //Line L2(100,100,100,250);
-    //L2.bres_plot_line(BLACK);
-    Circle C1(250,250,100);
-    C1.plot_semicircle(RED,'u');
-    Update_Screen();
+    Draw_flag();
     Handle_event();
     Close_Graphics();
 	return 0;
 }
 
+void Draw_flag()
+{
+
+    Update_Screen();
+}
 

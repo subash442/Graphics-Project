@@ -32,11 +32,11 @@ void Line::Set_Coordinate(int x11 ,int y11 , int x22,int y22)
 
 void Line::dda_plot_line(COLOR_POINT)
 {
-  int xinc,yinc,steps; //increment in x and y coordinate
+  float xinc,yinc,steps; //increment in x and y coordinate
   Set_PointColor(COLOR_VALUE);
   steps = abs(dx) > abs(dy)? abs(dx) : abs(dy);
-  xinc = dx / (float)steps;
-  yinc = dy / (float)steps;
+  xinc = dx / steps;
+  yinc = dy / steps;
   for(int i = 0; i < steps; i++)
   {
       x1 = x1+xinc;
@@ -47,49 +47,44 @@ void Line::dda_plot_line(COLOR_POINT)
 
 void Line::bres_plot_line(COLOR_POINT)
 {
-    int p ,x,y,lastx;
-    if (dx == 0 || dy == 0)
-        dda_plot_line(COLOR_VALUE);
-    else
-    {
-        dy = abs(dy);
-        dx = abs(dx);
-        p = 2*dy - dx;
-        Set_PointColor(COLOR_VALUE);
-        if (x1>x2)
-        {
-            x = x2;
-            y = y2;
-            lastx = x1;
-        }
-        else
-        {
-            x = x1;
+    int p,x,y,lastval;
+    Set_PointColor(COLOR_VALUE);
+     if (dx > 0)
+     {
+         x = x1;
+         if (dy > 0)
             y = y1;
-            lastx = x2;
-        }
-        Put_Point(x1,y1);
-        while(x <= lastx)
-        {
-            if (p < 0)
-            {
-                p = p + 2*dy;
-            }
-            else
-            {
-                p = p + 2*dy - 2*dx;
-                y++;
-            }
-            x++;
-            Put_Point(x,y);
-        }
-    }
+         else
+            y = -y1;
+         lastval = x2;
+     }
+     else
+     {
+         x = x2;
+         if (dy < 0)
+            y = y2;
+         else
+            y = -y2;
 
+         lastval = x1;
+     }
+     dy = abs(dy);
+     dx = abs(dx);
+     p = 2*dy - dx;
+     Put_Point(x,abs(y));
 
-
-
-
-
+     while(x <= lastval)
+     {
+         if (p<0)
+             p += 2*dy;
+         else
+         {
+             p += 2*dy - 2*dx;
+             y++;
+         }
+         x++;
+         Put_Point(x,abs(y));
+     }
 }
 
 Line::~Line()

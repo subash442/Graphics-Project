@@ -5,6 +5,7 @@ Circle::Circle()
     xc = 0;
     yc = 0;
     rad = 0;
+    obj_prp = 'c';
 }
 
 Circle::Circle(int h,int k,int radius)
