@@ -1,8 +1,7 @@
 #include "SDL_Graphics.h"
 
-bool quit;
 
-SDL_Event mouse_event;
+
 SDL_Window* window = NULL;
 SDL_Renderer* renderer = NULL;
 
@@ -26,7 +25,6 @@ bool Init_Graphics()
 
     SDL_SetRenderDrawColor( renderer, WHITE ); //set the renderer colour
     SDL_RenderClear( renderer );    //clear the screen with given renderer colour
-    quit = false;
     return true;
 }
 
@@ -38,6 +36,13 @@ void Set_PointColor(COLOR_POINT)
 void Put_Point(int x,int y)
 {
     SDL_RenderDrawPoint(renderer,x,SCREEN_HEIGHT-y);  //draw a point of renderer colour in given location
+}
+
+void Clear_Screen()
+{
+    SDL_SetRenderDrawColor(renderer,WHITE);
+    SDL_RenderClear(renderer);
+    Update_Screen();
 }
 
 void Update_Screen()
@@ -57,17 +62,8 @@ void Close_Graphics()
     SDL_Quit();
 }
 
-void Handle_event()
-{
-     while (!quit)
-    {
-        while(SDL_PollEvent(&mouse_event) != 0)
-        {
-            if (mouse_event.type == SDL_QUIT)
-                quit = true;
-        }
-    }
-}
+
+
 
 /*template <class T>
 T scale(T object,float Scale_factor)

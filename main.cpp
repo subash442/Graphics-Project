@@ -6,10 +6,22 @@
 *****Caution::don't use variable r,g,b because it is used in colors
 ********/
 
-void Draw_flag();
+bool quit;
+bool key_left;
+bool key_right;
+SDL_Event event_preses;
+
+
+
+void Draw_flag(int ang = 0);
+void Handle_event();
 
 int main( int argc, char* args[] )
 {
+    quit = false;
+    key_left = false;
+    key_right = false;
+
     if (!Init_Graphics())
     {
         cout<<"SDL initialization failed."<<SDL_GetError()<<endl;
@@ -21,32 +33,54 @@ int main( int argc, char* args[] )
 	return 0;
 }
 
-void Draw_flag()
+
+
+void Draw_flag(int ang)
 {
-    /*//Border of the flag
-    Line L1(150,100,550,100);
-    Line L2(150,100,150,635);
-    Line L3(550,400,150,635);
-    Line L4(250,399,550,399);
-    Line L5(550,101,250,399);
-    L1.bres_plot_line(DARK_BLUE);
-    L2.bres_plot_line(DARK_BLUE);
-    L3.bres_plot_line(DARK_BLUE);
-    L4.bres_plot_line(DARK_BLUE);
-    L5.bres_plot_line(DARK_BLUE);
-
-    //semi-circle for moon and full circle for sun
-    Circle C1(250,480,50);
-    Circle C2(250,510,60);
-    Circle C3(250,457,25);
-    Circle C4(250,250,50);
-    C1.plot_semicircle(CRIMSON,'d');
-    C2.plot_semicircle(CRIMSON,'d');
-    C3.plot_semicircle(CRIMSON,'u');
-    C4.plot_circle(CRIMSON);*/
-
+    //Border of the flag
+    Line L1(100,0,0,100,100,0);
+    //Line L1(0,0,25,100,0,25);
+    //Line L2(0,0,25,0,134,25);
+    //Line L3(100,76,25,0,134,25);
+    //Line L4(25,75,25,100,75,25);
+    //Line L5(100,1,25,25,75,25);
+    L1.Plot_line(DARK_BLUE,ang);
+    //L2.Plot_line(DARK_BLUE,ang);
+    //L3.Plot_line(DARK_BLUE,ang);
+    //L4.Plot_line(DARK_BLUE,ang);
+    //L5.Plot_line(DARK_BLUE,ang);
 
 
     Update_Screen();
 }
 
+void Handle_event()
+{
+     while (!quit)
+    {
+        while(SDL_PollEvent(&event_preses) != 0)
+        {
+            if (event_preses.type == SDL_QUIT)
+                quit = true;
+            if (event_preses.type == SDL_KEYDOWN)
+            {
+                switch(event_preses.key.keysym.sym)
+                {
+                    case SDLK_RIGHT:
+                        //update right variable
+                        key_right = true;
+                        Clear_Screen();
+                        Draw_flag(90);
+                        break;
+                    case SDLK_LEFT:
+                        //update left variable
+                        key_left = true;
+                        Clear_Screen();
+                        Draw_flag(-90);
+                        break;
+                }
+            }
+
+        }
+    }
+}

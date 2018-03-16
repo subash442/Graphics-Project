@@ -15,8 +15,6 @@ class Circle
         void set_circle_parameter(int h,int k,int radius);
         void plot_circle(COLOR_POINT);
         void plot_semicircle(COLOR_POINT,char d);
-        template <class T>
-        friend T scale(T object,float Scale_factor);
 
         virtual ~Circle();
 };
